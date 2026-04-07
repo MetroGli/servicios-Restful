@@ -1,2 +1,4 @@
 entidad\Person.class
 servicios\Service.class
+co\edu\unipiloto\ws\testws\model\Person.class
+co\edu\unipiloto\ws\testws\services\Service.class
