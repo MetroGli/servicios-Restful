@@ -21,7 +21,6 @@ public class Service {
         }
     }
 
-    // ? GET XML por ID
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_XML)
@@ -29,7 +28,6 @@ public class Service {
         return persons.get(id);
     }
 
-    // ? GET JSON por ID
     @GET
     @Path("/{id}/json")
     @Produces(MediaType.APPLICATION_JSON)
@@ -37,7 +35,6 @@ public class Service {
         return persons.get(id);
     }
 
-    // ? TODOS XML
     @GET
     @Path("/all")
     @Produces(MediaType.APPLICATION_XML)
@@ -45,7 +42,6 @@ public class Service {
         return new ArrayList<Person>(persons.values());
     }
 
-    // ? TODOS JSON
     @GET
     @Path("/all/json")
     @Produces(MediaType.APPLICATION_JSON)
@@ -53,7 +49,6 @@ public class Service {
         return new ArrayList<Person>(persons.values());
     }
 
-    // ? AGREGAR PERSONA (JSON)
     @POST
     @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -63,7 +58,6 @@ public class Service {
         return person;
     }
 
-    // ? PROMEDIO (XML) ? TAREA
     @GET
     @Path("/promedio")
     @Produces(MediaType.APPLICATION_XML)
@@ -75,7 +69,6 @@ public class Service {
         return suma / persons.size();
     }
 
-    // ? SUMA (JSON) ? TAREA
     @GET
     @Path("/suma")
     @Produces(MediaType.APPLICATION_JSON)
